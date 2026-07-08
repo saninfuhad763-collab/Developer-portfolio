@@ -1,31 +1,63 @@
 import { ThemeProvider, useTheme } from './theme/ThemeProvider';
 import { Container } from './components/layout/Container';
 import { Section } from './components/layout/Section';
+import { Button } from './components/ui/Button';
+import { Badge } from './components/ui/Badge';
+import { SectionHeading } from './components/common/SectionHeading';
 
 const ThemeToggle = () => {
   const { theme, setTheme } = useTheme();
 
   return (
-    <button
+    <Button
+      variant="outline"
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-      className="px-4 py-2 mt-4 bg-primary text-white rounded-md hover:opacity-90 transition-opacity"
-      style={{ backgroundColor: 'var(--color-primary)' }} // Using the placeholder token
+      className="mt-4"
     >
-      Toggle Theme (Current: {theme})
-    </button>
+      Toggle Theme ({theme})
+    </Button>
   );
 };
 
 function AppContent() {
   return (
     <div className="min-h-screen">
-      <Section>
+      <Section variant="default" spacing="default">
         <Container>
-          <h1 className="text-3xl font-bold">Portfolio Foundation</h1>
-          <p className="mt-2 text-gray-600 dark:text-gray-400">
-            Tailwind CSS, ThemeProvider, Container, and Section components are configured.
-          </p>
-          <ThemeToggle />
+          <SectionHeading
+            eyebrow="Design System"
+            title="Design System Foundation"
+            description="A comprehensive, reusable design system built for a production-quality developer portfolio. Modern SaaS aesthetics with selective glassmorphism."
+          />
+          
+          <div className="mt-12 flex flex-col gap-8">
+            <div className="glass-panel p-6 rounded-lg">
+              <h3 className="text-h3 mb-4">Buttons</h3>
+              <div className="flex flex-wrap gap-4">
+                <Button variant="primary">Primary</Button>
+                <Button variant="secondary">Secondary</Button>
+                <Button variant="outline">Outline</Button>
+                <Button variant="ghost">Ghost</Button>
+                <Button variant="primary" isLoading>Loading</Button>
+              </div>
+            </div>
+
+            <div className="glass-panel p-6 rounded-lg">
+              <h3 className="text-h3 mb-4">Badges</h3>
+              <div className="flex flex-wrap gap-4">
+                <Badge variant="default">Default</Badge>
+                <Badge variant="primary">Primary</Badge>
+                <Badge variant="success">Success</Badge>
+                <Badge variant="warning">Warning</Badge>
+                <Badge variant="outline">Outline</Badge>
+              </div>
+            </div>
+
+            <div className="glass-panel p-6 rounded-lg">
+              <h3 className="text-h3 mb-4">Theme</h3>
+              <ThemeToggle />
+            </div>
+          </div>
         </Container>
       </Section>
     </div>

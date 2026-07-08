@@ -1,59 +1,145 @@
 @import "tailwindcss";
 
 @theme {
-  /* Design Token Placeholders */
-  
   /* Colors */
-  --color-primary: #3b82f6; /* Placeholder */
-  --color-secondary: #8b5cf6; /* Placeholder */
-  --color-accent: #f59e0b; /* Placeholder */
-  --color-background-light: #ffffff; /* Placeholder */
-  --color-background-dark: #0f172a; /* Placeholder */
-  --color-text-light: #0f172a; /* Placeholder */
-  --color-text-dark: #f8fafc; /* Placeholder */
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-secondary: var(--surface-secondary);
+  
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  
+  --color-accent-primary: var(--accent-primary);
+  --color-accent-hover: var(--accent-hover);
+  
+  --color-border: var(--border);
+  --color-divider: var(--divider);
+  --color-focus: var(--focus-ring);
+  
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-error: var(--error);
+  --color-info: var(--info);
 
   /* Typography */
-  --font-primary: "Inter", sans-serif; /* Placeholder */
-  --font-secondary: "Roboto", sans-serif; /* Placeholder */
+  --font-sans: 'Inter', system-ui, sans-serif;
+  
+  --text-display: 3.5rem;
+  --text-display--line-height: 1.1;
+  --text-h1: 2.5rem;
+  --text-h1--line-height: 1.2;
+  --text-h2: 2rem;
+  --text-h2--line-height: 1.25;
+  --text-h3: 1.5rem;
+  --text-h3--line-height: 1.3;
+  --text-h4: 1.25rem;
+  --text-h4--line-height: 1.4;
+  --text-body-large: 1.125rem;
+  --text-body-large--line-height: 1.6;
+  --text-body: 1rem;
+  --text-body--line-height: 1.6;
+  --text-small: 0.875rem;
+  --text-small--line-height: 1.5;
+  --text-caption: 0.75rem;
+  --text-caption--line-height: 1.4;
 
-  /* Spacing */
-  --spacing-section-sm: 2rem; /* Placeholder */
-  --spacing-section-md: 4rem; /* Placeholder */
-  --spacing-section-lg: 8rem; /* Placeholder */
-
-  /* Radius */
-  --radius-card: 0.5rem; /* Placeholder */
-  --radius-button: 0.25rem; /* Placeholder */
+  /* Border Radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-full: 9999px;
 
   /* Shadows */
-  --shadow-card: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); /* Placeholder */
-
-  /* Breakpoints (using standard tailwind conventions or custom if needed) */
-  --breakpoint-xs: 320px; /* Placeholder */
-
-  /* Motion */
-  --animate-transition-fast: 150ms ease-in-out; /* Placeholder */
-  --animate-transition-normal: 300ms ease-in-out; /* Placeholder */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-glass: 0 8px 32px 0 rgb(0 0 0 / 0.05); /* Subtle glass shadow */
 }
 
-/* Custom variant for dark mode based on class */
 @custom-variant dark (&:where(.dark, .dark *));
 
 @layer base {
   :root {
-    --bg-color: var(--color-background-light);
-    --text-color: var(--color-text-light);
+    --bg: #ffffff;
+    --surface: #f8fafc;
+    --surface-secondary: #f1f5f9;
+    
+    --text-primary: #0f172a;
+    --text-secondary: #334155;
+    --text-muted: #64748b;
+    
+    --accent-primary: #2563eb;
+    --accent-hover: #1d4ed8;
+    
+    --border: #e2e8f0;
+    --divider: #cbd5e1;
+    --focus-ring: #93c5fd;
+    
+    --success: #10b981;
+    --warning: #f59e0b;
+    --error: #ef4444;
+    --info: #3b82f6;
   }
 
   .dark {
-    --bg-color: var(--color-background-dark);
-    --text-color: var(--color-text-dark);
+    --bg: #020617; /* Slate 950 */
+    --surface: #0f172a; /* Slate 900 */
+    --surface-secondary: #1e293b; /* Slate 800 */
+    
+    --text-primary: #f8fafc;
+    --text-secondary: #cbd5e1;
+    --text-muted: #94a3b8;
+    
+    --accent-primary: #3b82f6;
+    --accent-hover: #60a5fa;
+    
+    --border: #334155;
+    --divider: #1e293b;
+    --focus-ring: #2563eb;
+    
+    --success: #059669;
+    --warning: #d97706;
+    --error: #dc2626;
+    --info: #2563eb;
   }
 
   body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    font-family: var(--font-primary);
-    transition: background-color var(--animate-transition-normal), color var(--animate-transition-normal);
+    background-color: var(--bg);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
+  }
+
+  /* Typography Base Settings */
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-text-primary;
+  }
+
+  p {
+    @apply text-text-secondary;
+  }
+}
+
+@layer utilities {
+  .text-display { @apply text-[3.5rem] leading-[1.1] font-bold tracking-tight; }
+  .text-h1 { @apply text-[2.5rem] leading-[1.2] font-bold tracking-tight; }
+  .text-h2 { @apply text-[2rem] leading-[1.25] font-semibold tracking-tight; }
+  .text-h3 { @apply text-[1.5rem] leading-[1.3] font-semibold tracking-tight; }
+  .text-h4 { @apply text-[1.25rem] leading-[1.4] font-medium tracking-tight; }
+  .text-body-large { @apply text-[1.125rem] leading-[1.6]; }
+  .text-body { @apply text-[1rem] leading-[1.6]; }
+  .text-small { @apply text-[0.875rem] leading-[1.5]; }
+  .text-caption { @apply text-[0.75rem] leading-[1.4]; }
+
+  /* Glassmorphism Utility */
+  .glass-panel {
+    @apply bg-surface/70 backdrop-blur-md border border-border shadow-glass;
+  }
+  .dark .glass-panel {
+    @apply bg-surface/50 border-white/10 shadow-none;
   }
 }
