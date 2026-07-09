@@ -1,10 +1,13 @@
 import { ThemeProvider } from './theme/ThemeProvider';
-import { DesignSystemPreview } from './pages/DesignSystemPreview';
+import { AppShell } from './layouts/AppShell';
+import { HomePage } from './pages/HomePage';
 
 function App() {
   return (
     <ThemeProvider>
-      <DesignSystemPreview />
+      <AppShell>
+        <HomePage />
+      </AppShell>
     </ThemeProvider>
   );
 }

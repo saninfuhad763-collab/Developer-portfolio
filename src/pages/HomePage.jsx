@@ -1,0 +1,41 @@
+import { Section } from "../components/layout/Section";
+import { Container } from "../components/layout/Container";
+import { Hero } from "../components/sections/Hero";
+
+export const HomePage = () => {
+  return (
+    <>
+      <Hero />
+
+      <Section id="about" variant="secondary">
+        <Container>
+          <h2 className="text-h2">About Placeholder</h2>
+        </Container>
+      </Section>
+
+      <Section id="skills">
+        <Container>
+          <h2 className="text-h2">Skills Placeholder</h2>
+        </Container>
+      </Section>
+
+      <Section id="projects" variant="secondary">
+        <Container>
+          <h2 className="text-h2">Projects Placeholder</h2>
+        </Container>
+      </Section>
+
+      <Section id="experience">
+        <Container>
+          <h2 className="text-h2">Experience Placeholder</h2>
+        </Container>
+      </Section>
+
+      <Section id="contact" variant="secondary">
+        <Container>
+          <h2 className="text-h2">Contact Placeholder</h2>
+        </Container>
+      </Section>
+    </>
+  );
+};
