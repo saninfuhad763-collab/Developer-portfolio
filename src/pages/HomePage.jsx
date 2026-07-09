@@ -5,6 +5,7 @@ import { About } from "../components/sections/About";
 import { Skills } from "../components/sections/Skills";
 import { Projects } from "../components/sections/Projects";
 import { ProfessionalJourney } from "../components/sections/ProfessionalJourney";
+import { EducationCertifications } from "../components/sections/EducationCertifications";
 
 export const HomePage = () => {
   return (
@@ -14,8 +15,9 @@ export const HomePage = () => {
       <Skills />
       <Projects />
       <ProfessionalJourney />
+      <EducationCertifications />
 
-      <Section id="contact" variant="secondary">
+      <Section id="contact" variant="default">
         <Container>
           <h2 className="text-h2">Contact Placeholder</h2>
         </Container>
