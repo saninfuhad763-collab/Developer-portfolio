@@ -1,17 +1,13 @@
 import { Section } from "../components/layout/Section";
 import { Container } from "../components/layout/Container";
 import { Hero } from "../components/sections/Hero";
+import { About } from "../components/sections/About";
 
 export const HomePage = () => {
   return (
     <>
       <Hero />
-
-      <Section id="about" variant="secondary">
-        <Container>
-          <h2 className="text-h2">About Placeholder</h2>
-        </Container>
-      </Section>
+      <About />
 
       <Section id="skills">
         <Container>
