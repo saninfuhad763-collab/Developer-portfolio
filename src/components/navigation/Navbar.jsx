@@ -39,7 +39,13 @@ export const Navbar = () => {
               
               <div className="flex items-center gap-4 border-l border-border pl-4">
                 <ThemeSwitcher />
-                <Button variant="primary" size="sm">
+                <Button 
+                  variant="primary" 
+                  size="sm"
+                  as="a"
+                  href="/assets/Full_Stack_Developer_Resume.pdf"
+                  download="Full_Stack_Developer_Resume.pdf"
+                >
                   Download Resume
                 </Button>
               </div>

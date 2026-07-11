@@ -77,7 +77,13 @@ export const MobileMenu = ({ isOpen, onClose }) => {
             <div className="flex justify-center">
               <ThemeSwitcher />
             </div>
-            <Button variant="primary" className="w-full">
+            <Button 
+              variant="primary" 
+              className="w-full"
+              as="a"
+              href="/assets/Full_Stack_Developer_Resume.pdf"
+              download="Full_Stack_Developer_Resume.pdf"
+            >
               Download Resume
             </Button>
           </div>

@@ -9,6 +9,7 @@ export const Button = forwardRef(({
   disabled, 
   children, 
   type = "button",
+  as: Component = "button",
   ...props 
 }, ref) => {
   const variants = {
@@ -27,10 +28,10 @@ export const Button = forwardRef(({
   const isDisabled = disabled || isLoading;
 
   return (
-    <button
+    <Component
       ref={ref}
-      type={type}
-      disabled={isDisabled}
+      type={Component === "button" ? type : undefined}
+      disabled={Component === "button" ? isDisabled : undefined}
       className={cn(
         "inline-flex items-center justify-center font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-focus focus-visible:ring-offset-2",
         "disabled:opacity-50 disabled:cursor-not-allowed",
@@ -53,7 +54,7 @@ export const Button = forwardRef(({
         </svg>
       ) : null}
       {children}
-    </button>
+    </Component>
   );
 });
 
