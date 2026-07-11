@@ -9,6 +9,7 @@ export const ProjectCard = ({
   description,
   techStack,
   githubUrl,
+  imageUrl,
   className
 }) => {
   const getStatusVariant = (status) => {
@@ -19,10 +20,20 @@ export const ProjectCard = ({
   return (
     <div 
       className={cn(
-        "flex flex-col h-full p-6 bg-surface border border-border rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1",
+        "group flex flex-col h-full p-6 bg-surface border border-border rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1",
         className
       )}
     >
+      {imageUrl && (
+        <div className="relative w-full aspect-video rounded-xl bg-surface-secondary overflow-hidden mb-6 shadow-sm group-hover:shadow-md transition-shadow duration-300">
+          <img 
+            src={imageUrl} 
+            alt={`${title} screenshot`} 
+            loading="lazy"
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+          />
+        </div>
+      )}
       <Badge variant={getStatusVariant(status)} className="self-start mb-4">
         {status}
       </Badge>

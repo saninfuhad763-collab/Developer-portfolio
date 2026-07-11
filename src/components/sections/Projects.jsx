@@ -24,7 +24,8 @@ export const Projects = () => {
       techStack: [
         "React", "Vite", "Node.js", "Express.js", "MongoDB", "Tailwind CSS", "JWT", "Puppeteer", "AI API Integration", "GitHub"
       ],
-      githubUrl: "https://github.com/saninfuhad763-collab/CareerForge-Pro"
+      githubUrl: "https://github.com/saninfuhad763-collab/CareerForge-Pro",
+      imageUrl: "/assets/projects/careerforge-pro.png"
     },
     {
       title: "OpsMind AI",
@@ -43,7 +44,8 @@ export const Projects = () => {
       techStack: [
         "React", "Node.js", "Express.js", "MongoDB", "AI APIs", "PDF Processing", "GitHub"
       ],
-      githubUrl: "https://github.com/saninfuhad763-collab/OpsMind-AI"
+      githubUrl: "https://github.com/saninfuhad763-collab/OpsMind-AI",
+      imageUrl: "/assets/projects/opsmind-ai.png"
     }
   ];
 
@@ -54,7 +56,8 @@ export const Projects = () => {
       tagline: "AI-powered Chrome Extension Generator",
       description: "A platform that generates Chrome extension boilerplate and project structure using AI-assisted workflows. Current implementation demonstrates architecture and foundational engineering while remaining under active development.",
       techStack: ["React", "Node.js", "Express.js", "MongoDB", "GitHub"],
-      githubUrl: "https://github.com/saninfuhad763-collab/extensio-ai"
+      githubUrl: "https://github.com/saninfuhad763-collab/extensio-ai",
+      imageUrl: "/assets/projects/extensio-ai.png"
     },
     {
       title: "Fitness Enhancer",
@@ -62,7 +65,8 @@ export const Projects = () => {
       tagline: "Fitness Tracking Web Application",
       description: "An early full-stack project focused on backend fundamentals including authentication, user profiles, and workout tracking.",
       techStack: ["Python", "Django", "HTML", "CSS", "GitHub"],
-      githubUrl: "https://github.com/saninfuhad763-collab/fitness-enhancer"
+      githubUrl: "https://github.com/saninfuhad763-collab/fitness-enhancer",
+      imageUrl: "/assets/projects/fitness-enhancer.png"
     }
   ];
 
