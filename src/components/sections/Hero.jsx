@@ -32,7 +32,7 @@ export const Hero = () => {
             </h1>
 
             {/* Description */}
-            <p className="text-body-large mt-6 text-text-muted animate-fade-in-up delay-200">
+            <p className="text-body-large mt-8 md:mt-6 text-text-muted animate-fade-in-up delay-200 leading-8 md:leading-[1.6] max-w-[32ch] md:max-w-none">
               I'm a Full Stack Developer specializing in React, Node.js, and modern web technologies. I enjoy building production-ready AI-powered web applications with clean architecture and thoughtful user experiences.
             </p>
 
