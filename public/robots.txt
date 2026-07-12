@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-# TODO: Replace with the production domain
-Sitemap: https://fuhadsaneen.com/sitemap.xml
+# Production domain
+Sitemap: https://developer-portfolio-iota-flax.vercel.app/sitemap.xml
