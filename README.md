@@ -1,16 +1,86 @@
-# React + Vite
+# Fuhad Saneen | Full Stack Developer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A production-grade software engineering portfolio demonstrating modern web development standards.
 
-Currently, two official plugins are available:
+**[View Live Portfolio](https://developer-portfolio-iota-flax.vercel.app/)** | **[Contact Me](#contact)**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## About
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+I am a Full Stack Developer specializing in React, Node.js, and AI-powered web applications. This repository contains the source code for my professional portfolio. 
 
-## Expanding the ESLint configuration
+Beyond serving as a resume, this project is a live demonstration of my engineering standards. Visitors can expect a highly optimized, accessible, and responsive application built with clean architecture and meticulous attention to user experience.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Screenshots
+
+*(To be added by repository owner)*
+
+- `[Screenshot of Hero Section]`
+- `[Screenshot of Projects Section]`
+- `[Screenshot of Skills Section]`
+
+---
+
+## Technical Stack
+
+| Category | Technology |
+| :--- | :--- |
+| **Frontend** | React 19 |
+| **Styling** | Tailwind CSS v4 |
+| **Build Tool** | Vite 8 |
+| **Deployment** | Vercel |
+
+---
+
+## Key Features
+
+- **Production-Ready UX:** Integrated resume download, persistent dark/light theme switching, and fluid responsive design across all viewports.
+- **Performance Optimized:** 100/100 Lighthouse scores, zero-FOUC (Flash of Unstyled Content) theme initialization, and a minimal dependency footprint.
+- **Hardware-Accelerated UI:** Custom intersection hooks for highly performant scroll animations without relying on heavy third-party animation libraries.
+- **Mobile Stabilization:** Uses modern `100svh` implementations to prevent layout shifts caused by dynamic mobile browser toolbars.
+- **Accessibility (a11y):** Full ARIA compliance, semantic HTML5, and keyboard navigable focus rings.
+
+---
+
+## Getting Started
+
+To run this project locally:
+
+```bash
+git clone https://github.com/fuhadsaneen/developer-portfolio.git
+cd developer-portfolio
+npm install
+npm run dev
+```
+
+---
+
+## Deployment
+
+This portfolio is deployed and hosted via **Vercel**. 
+
+To build for production locally:
+```bash
+npm run build
+npm run preview
+```
+
+---
+
+## Contact
+
+I am always open to discussing new engineering opportunities. Let's connect:
+
+- **Portfolio:** [fuhadsaneen.com](https://developer-portfolio-iota-flax.vercel.app/)  
+- **LinkedIn:** [linkedin.com/in/fuhadsaneen](#) *(Update with actual link)*  
+- **GitHub:** [github.com/fuhadsaneen](#) *(Update with actual link)*  
+- **Email:** fuhadsaneen@example.com *(Update with actual email)*  
+
+---
+
+## License
+
+This project is licensed under the MIT License.
