@@ -3,6 +3,7 @@ import { Container } from "../layout/Container";
 import { SectionHeading } from "../common/SectionHeading";
 import { CertificationCard } from "../common/CertificationCard";
 import { Badge } from "../ui/Badge";
+import { Reveal } from "../ui/Reveal";
 
 export const EducationCertifications = () => {
   const certifications = [
@@ -31,46 +32,48 @@ export const EducationCertifications = () => {
       <Container>
         <div className="flex flex-col gap-12 lg:gap-16">
           
-          <div className="max-w-3xl animate-fade-in-up">
+          <Reveal className="max-w-3xl">
             <SectionHeading 
               eyebrow="EDUCATION & CERTIFICATIONS"
               title="Academic foundation complemented by practical, industry-focused training."
               description="My academic education and professional training have provided the foundation for building modern full-stack applications, while hands-on projects have transformed that knowledge into practical software engineering experience."
             />
-          </div>
+          </Reveal>
 
           <div className="flex flex-col gap-8">
             
             {/* Education Card */}
-            <div className="p-8 lg:p-10 bg-bg border border-border rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 animate-fade-in-up delay-100 flex flex-col md:flex-row gap-8 items-start md:items-center">
-              <div className="flex-shrink-0 p-4 bg-surface-secondary border border-border rounded-full text-text-secondary">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-              </div>
-              <div className="flex-grow">
-                <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-3">
-                  <div>
-                    <h3 className="text-h3 font-bold text-text-primary">Bachelor of Computer Applications (BCA)</h3>
-                    <p className="text-body-large font-medium text-text-secondary mt-1">Nasra College of Arts and Science</p>
-                  </div>
-                  <Badge variant="outline" className="self-start md:self-auto shrink-0 bg-surface">
-                    Graduated 2022
-                  </Badge>
+            <Reveal delay={0.05}>
+              <div className="p-8 lg:p-10 bg-bg border border-border rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col md:flex-row gap-8 items-start md:items-center">
+                <div className="flex-shrink-0 p-4 bg-surface-secondary border border-border rounded-full text-text-secondary">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
                 </div>
-                <p className="text-small text-text-muted mb-4">Affiliated with the University of Calicut</p>
-                <p className="text-body text-text-secondary max-w-4xl">
-                  Built a strong foundation in computer science fundamentals, programming, databases, software engineering principles, and problem-solving, providing the academic base for my full-stack development journey.
-                </p>
+                <div className="flex-grow">
+                  <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-3">
+                    <div>
+                      <h3 className="text-h3 font-bold text-text-primary">Bachelor of Computer Applications (BCA)</h3>
+                      <p className="text-body-large font-medium text-text-secondary mt-1">Nasra College of Arts and Science</p>
+                    </div>
+                    <Badge variant="outline" className="self-start md:self-auto shrink-0 bg-surface">
+                      Graduated 2022
+                    </Badge>
+                  </div>
+                  <p className="text-small text-text-muted mb-4">Affiliated with the University of Calicut</p>
+                  <p className="text-body text-text-secondary max-w-4xl">
+                    Built a strong foundation in computer science fundamentals, programming, databases, software engineering principles, and problem-solving, providing the academic base for my full-stack development journey.
+                  </p>
+                </div>
               </div>
-            </div>
+            </Reveal>
 
             {/* Certification Cards Grid */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {certifications.map((cert, index) => (
-                <CertificationCard 
-                  key={cert.title}
-                  {...cert}
-                  className={`animate-fade-in-up delay-${Math.min((index + 2) * 100, 400)}`}
-                />
+                <Reveal key={cert.title} delay={0.1 + (index * 0.05)}>
+                  <CertificationCard 
+                    {...cert}
+                  />
+                </Reveal>
               ))}
             </div>
 

@@ -2,6 +2,7 @@ import { Section } from "../layout/Section";
 import { Container } from "../layout/Container";
 import { SectionHeading } from "../common/SectionHeading";
 import { TimelineItem } from "../common/TimelineItem";
+import { Reveal } from "../ui/Reveal";
 
 export const ProfessionalJourney = () => {
   const journeyItems = [
@@ -36,7 +37,7 @@ export const ProfessionalJourney = () => {
       <Container>
         <div className="flex flex-col gap-12 lg:gap-16">
           
-          <div className="max-w-3xl animate-fade-in-up">
+          <Reveal className="max-w-3xl">
             <SectionHeading 
               eyebrow="PROFESSIONAL JOURNEY"
               title="A journey of continuous learning, full-stack development, and AI-powered software engineering."
@@ -44,23 +45,23 @@ export const ProfessionalJourney = () => {
             <p className="mt-6 text-body-large text-text-secondary leading-relaxed">
               My professional journey has been driven by hands-on development, structured learning, real-world projects, and continuous improvement. From building my foundation during a web development internship to creating AI-powered full-stack applications, each step has strengthened both my technical expertise and engineering mindset.
             </p>
-          </div>
+          </Reveal>
 
           <div className="max-w-4xl pt-4">
             <div className="flex flex-col">
               {journeyItems.map((item, index) => (
-                <TimelineItem 
-                  key={item.title}
-                  title={item.title}
-                  description={item.description}
-                  isLast={index === journeyItems.length - 1}
-                  className={`animate-fade-in-up delay-${Math.min((index + 1) * 100, 400)}`}
-                />
+                <Reveal key={item.title} delay={index * 0.05}>
+                  <TimelineItem 
+                    title={item.title}
+                    description={item.description}
+                    isLast={index === journeyItems.length - 1}
+                  />
+                </Reveal>
               ))}
             </div>
 
             {/* Current Focus Panel */}
-            <div className="mt-8 ml-0 sm:ml-6 p-6 sm:p-8 bg-surface border border-accent-primary/30 rounded-2xl flex flex-col sm:flex-row items-start gap-5 shadow-sm hover:shadow-md transition-shadow duration-300 animate-fade-in-up delay-500 relative overflow-hidden">
+            <Reveal delay={0.2} className="mt-8 ml-0 sm:ml-6 p-6 sm:p-8 bg-surface border border-accent-primary/30 rounded-2xl flex flex-col sm:flex-row items-start gap-5 shadow-sm hover:shadow-md transition-shadow duration-300 relative overflow-hidden">
               <div className="absolute top-0 left-0 w-1 h-full bg-accent-primary" />
               <div className="p-3 bg-accent-primary/10 rounded-xl text-accent-primary shrink-0 border border-accent-primary/20">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
@@ -71,7 +72,7 @@ export const ProfessionalJourney = () => {
                   Building production-quality AI-powered full-stack applications, improving software architecture, and continuously expanding expertise in scalable web development and modern software engineering practices.
                 </p>
               </div>
-            </div>
+            </Reveal>
 
           </div>
         </div>

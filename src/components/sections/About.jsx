@@ -2,6 +2,7 @@ import { Section } from "../layout/Section";
 import { Container } from "../layout/Container";
 import { SectionHeading } from "../common/SectionHeading";
 import { ValueCard } from "../common/ValueCard";
+import { Reveal } from "../ui/Reveal";
 
 export const About = () => {
   const valueCards = [
@@ -25,7 +26,7 @@ export const About = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           
           {/* Left Column: Context */}
-          <div className="flex flex-col gap-6 animate-fade-in-up">
+          <Reveal className="flex flex-col gap-6">
             <SectionHeading 
               eyebrow="ABOUT ME"
               title="Building software with a focus on quality, usability, and continuous improvement."
@@ -39,17 +40,17 @@ export const About = () => {
                 I'm eager to contribute to collaborative teams, continue learning from experienced engineers, and build software that creates meaningful value for users.
               </p>
             </div>
-          </div>
+          </Reveal>
 
           {/* Right Column: Value Cards */}
           <div className="flex flex-col gap-6">
             {valueCards.map((card, index) => (
-              <ValueCard 
-                key={card.title}
-                title={card.title}
-                description={card.description}
-                className={`animate-fade-in-up delay-${(index + 1) * 100}`}
-              />
+              <Reveal key={card.title} delay={index * 0.05}>
+                <ValueCard 
+                  title={card.title}
+                  description={card.description}
+                />
+              </Reveal>
             ))}
           </div>
 

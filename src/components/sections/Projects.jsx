@@ -3,6 +3,7 @@ import { Container } from "../layout/Container";
 import { SectionHeading } from "../common/SectionHeading";
 import { FeaturedProjectCard } from "../common/FeaturedProjectCard";
 import { ProjectCard } from "../common/ProjectCard";
+import { Reveal } from "../ui/Reveal";
 
 export const Projects = () => {
   const featuredProjects = [
@@ -75,29 +76,30 @@ export const Projects = () => {
       <Container>
         <div className="flex flex-col gap-16">
           
-          <div className="max-w-3xl animate-fade-in-up">
+          <Reveal className="max-w-3xl">
             <SectionHeading 
               eyebrow="FEATURED PROJECTS"
               title="Selected work demonstrating full-stack engineering and AI-powered application development."
               description="These projects reflect my experience building complete web applications—from planning and architecture to frontend development, backend services, AI integration, and production-focused engineering practices."
             />
-          </div>
+          </Reveal>
 
           <div className="flex flex-col gap-12">
             {featuredProjects.map((project, index) => (
-              <FeaturedProjectCard 
-                key={project.title}
-                {...project}
-                className={`animate-fade-in-up delay-${Math.min((index + 1) * 100, 400)}`}
-              />
-            ))}
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-4 animate-fade-in-up delay-300">
-              {compactProjects.map((project) => (
-                <ProjectCard 
-                  key={project.title}
+              <Reveal key={project.title} delay={index * 0.05}>
+                <FeaturedProjectCard 
                   {...project}
                 />
+              </Reveal>
+            ))}
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-4">
+              {compactProjects.map((project, index) => (
+                <Reveal key={project.title} delay={0.1 + (index * 0.05)}>
+                  <ProjectCard 
+                    {...project}
+                  />
+                </Reveal>
               ))}
             </div>
           </div>

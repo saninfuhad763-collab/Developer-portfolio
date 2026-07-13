@@ -2,6 +2,7 @@ import { Container } from "../layout/Container";
 import { Section } from "../layout/Section";
 import { Button } from "../ui/Button";
 import { Badge } from "../ui/Badge";
+import { Reveal } from "../ui/Reveal";
 
 export const Hero = () => {
   return (
@@ -17,27 +18,27 @@ export const Hero = () => {
           <div className="flex flex-col items-start max-w-2xl">
             
             {/* Eyebrow */}
-            <div className="animate-fade-in-up">
+            <Reveal>
               <span className="text-accent-primary font-semibold text-small tracking-widest uppercase">
                 FULL STACK DEVELOPER • AI WEB APPLICATIONS
               </span>
-            </div>
+            </Reveal>
 
             {/* Heading */}
-            <h1 className="text-display mt-6 animate-fade-in-up delay-100">
+            <Reveal as="h1" delay={0.05} className="text-display mt-6">
               Hi, I'm Fuhad Saneen.<br />
               <span className="text-text-secondary">
                 I build modern full-stack and AI-powered web applications.
               </span>
-            </h1>
+            </Reveal>
 
             {/* Description */}
-            <p className="text-body-large mt-8 md:mt-6 text-text-muted animate-fade-in-up delay-200 leading-8 md:leading-[1.6] max-w-[32ch] md:max-w-none">
+            <Reveal as="p" delay={0.1} className="text-body-large mt-8 md:mt-6 text-text-muted leading-8 md:leading-[1.6] max-w-[32ch] md:max-w-none">
               I'm a Full Stack Developer specializing in React, Node.js, and modern web technologies. I enjoy building production-ready AI-powered web applications with clean architecture and thoughtful user experiences.
-            </p>
+            </Reveal>
 
             {/* CTAs */}
-            <div className="flex flex-wrap items-center gap-4 mt-8 animate-fade-in-up delay-300">
+            <Reveal delay={0.15} className="flex flex-wrap items-center gap-4 mt-8">
               <Button 
                 variant="primary" 
                 size="lg" 
@@ -52,10 +53,10 @@ export const Hero = () => {
               >
                 Get In Touch
               </Button>
-            </div>
+            </Reveal>
 
             {/* Trust Indicators */}
-            <div className="mt-12 animate-fade-in-up delay-400 w-full">
+            <Reveal delay={0.2} className="mt-12 w-full">
               <p className="text-small font-medium text-text-muted mb-4 uppercase tracking-wider">
                 Expertise & Background
               </p>
@@ -65,12 +66,12 @@ export const Hero = () => {
                 <Badge variant="outline" className="px-3 py-1.5 text-small bg-surface">Python Full Stack Certified</Badge>
                 <Badge variant="outline" className="px-3 py-1.5 text-small bg-surface">Web Development Internship</Badge>
               </div>
-            </div>
+            </Reveal>
 
           </div>
 
           {/* Right Column: Photo Placeholder */}
-          <div className="flex justify-center lg:justify-end animate-fade-in-up delay-200">
+          <Reveal delay={0.1} className="flex justify-center lg:justify-end">
             <div className="relative w-full max-w-md aspect-[4/5] rounded-2xl overflow-hidden bg-surface-secondary shadow-lg group">
               <img 
                 src="/assets/profile/profile-photo.webp" 
@@ -78,7 +79,7 @@ export const Hero = () => {
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
               />
             </div>
-          </div>
+          </Reveal>
 
         </div>
       </Container>

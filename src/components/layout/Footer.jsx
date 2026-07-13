@@ -1,4 +1,5 @@
 import { Container } from "./Container";
+import { Reveal } from "../ui/Reveal";
 
 export const Footer = () => {
   const quickLinks = [
@@ -42,9 +43,9 @@ export const Footer = () => {
   };
 
   return (
-    <footer className="bg-surface-secondary border-t border-border pt-16 md:pt-8 pb-8 md:pb-3 mt-auto animate-fade-in-up">
+    <footer className="bg-surface-secondary border-t border-border pt-16 md:pt-8 pb-8 md:pb-3 mt-auto">
       <Container>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-8 mb-16 md:mb-4">
+        <Reveal className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-8 mb-16 md:mb-4">
           
           {/* Left: Branding & Tagline */}
           <div className="md:col-span-2 flex flex-col items-start gap-4 md:gap-2 pr-0 lg:pr-8">
@@ -99,7 +100,7 @@ export const Footer = () => {
             </div>
           </div>
 
-        </div>
+        </Reveal>
 
         {/* Bottom: Copyright & Tech */}
         <div className="border-t border-border/60 pt-8 md:pt-3 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">

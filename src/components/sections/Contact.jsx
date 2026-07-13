@@ -3,6 +3,7 @@ import { Container } from "../layout/Container";
 import { ContactCard } from "../common/ContactCard";
 import { Badge } from "../ui/Badge";
 import { Button } from "../ui/Button";
+import { Reveal } from "../ui/Reveal";
 
 export const Contact = () => {
   const contactLinks = [
@@ -49,7 +50,7 @@ export const Contact = () => {
       <Container>
         <div className="flex flex-col gap-12 lg:gap-16">
           
-          <div className="max-w-3xl animate-fade-in-up">
+          <Reveal className="max-w-3xl">
             <div className="flex flex-col items-start gap-4 mb-5">
               <span className="text-accent-primary font-semibold text-small tracking-wider uppercase">
                 GET IN TOUCH
@@ -66,19 +67,21 @@ export const Contact = () => {
             <p className="text-body-large text-text-secondary leading-relaxed">
               I'm currently seeking opportunities as a Full Stack Developer and enjoy building production-quality AI-powered web applications. Whether you're hiring, looking for a collaborator, or have an exciting project in mind, I'd be happy to connect and discuss how I can contribute.
             </p>
-          </div>
+          </Reveal>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 animate-fade-in-up delay-200">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
             
             {/* Left Column: Direct Links */}
             <div className="flex flex-col gap-4">
-              {contactLinks.map((link) => (
-                <ContactCard key={link.label} {...link} />
+              {contactLinks.map((link, index) => (
+                <Reveal key={link.label} delay={0.05 + (index * 0.05)}>
+                  <ContactCard {...link} />
+                </Reveal>
               ))}
             </div>
 
             {/* Right Column: Available For Panel */}
-            <div className="p-8 bg-surface border border-border rounded-2xl shadow-sm h-full flex flex-col">
+            <Reveal delay={0.1} className="p-8 bg-surface border border-border rounded-2xl shadow-sm h-full flex flex-col">
               <div className="flex items-center gap-3 mb-6">
                 <div className="p-2.5 bg-accent-primary/10 rounded-lg text-accent-primary shrink-0">
                   <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
@@ -94,11 +97,11 @@ export const Contact = () => {
                   </li>
                 ))}
               </ul>
-            </div>
+            </Reveal>
           </div>
 
           {/* Bottom Actions */}
-          <div className="flex flex-wrap items-center gap-4 pt-4 animate-fade-in-up delay-300">
+          <Reveal delay={0.2} className="flex flex-wrap items-center gap-4 pt-4">
             <Button 
               variant="primary" 
               size="lg" 
@@ -116,7 +119,7 @@ export const Contact = () => {
             >
               Download Resume
             </Button>
-          </div>
+          </Reveal>
 
         </div>
       </Container>

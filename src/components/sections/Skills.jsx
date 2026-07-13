@@ -2,6 +2,7 @@ import { Section } from "../layout/Section";
 import { Container } from "../layout/Container";
 import { SectionHeading } from "../common/SectionHeading";
 import { SkillCard } from "../common/SkillCard";
+import { Reveal } from "../ui/Reveal";
 
 export const Skills = () => {
   const skillCategories = [
@@ -37,23 +38,23 @@ export const Skills = () => {
       <Container>
         <div className="flex flex-col gap-12">
           
-          <div className="max-w-3xl animate-fade-in-up">
+          <Reveal className="max-w-3xl">
             <SectionHeading 
               eyebrow="TECHNICAL SKILLS"
               title="Modern technologies for building scalable full-stack applications."
               description="I use a modern development stack to build responsive frontend interfaces, reliable backend services, production-ready databases, and AI-powered web applications. My focus is on selecting the right tools to create maintainable, high-quality software."
             />
-          </div>
+          </Reveal>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {skillCategories.map((category, index) => (
-              <SkillCard
-                key={category.title}
-                title={category.title}
-                icon={category.icon}
-                skills={category.skills}
-                className={`animate-fade-in-up delay-${Math.min((index + 1) * 100, 400)}`}
-              />
+              <Reveal key={category.title} delay={index * 0.05}>
+                <SkillCard
+                  title={category.title}
+                  icon={category.icon}
+                  skills={category.skills}
+                />
+              </Reveal>
             ))}
           </div>
           
