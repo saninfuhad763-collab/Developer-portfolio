@@ -84,11 +84,21 @@ export const Projects = () => {
     },
     {
       title: "Fitness Enhancer",
-      status: "Learning Project",
-      tagline: "Fitness Tracking Web Application",
-      description: "An early full-stack project focused on backend fundamentals including authentication, user profiles, and workout tracking.",
-      techStack: ["Python", "Django", "HTML", "CSS", "GitHub"],
-      githubUrl: "https://github.com/saninfuhad763-collab/fitness-enhancer",
+      status: "In Progress",
+      tagline: "Full-Stack Fitness Tracking Web Application",
+      description: "A full-stack Django fitness platform for personalized workout planning, nutrition tracking, progress monitoring, and profile management, featuring secure authentication and a structured free-versus-premium experience.",
+      techStack: [
+        "Python",
+        "Django",
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "Bootstrap",
+        "Chart.js",
+        "SQLite",
+        "GitHub"
+      ],
+      githubUrl: "https://github.com/saninfuhad763-collab/Fitness-Enhancer",
       imageUrl: "/assets/projects/fitness-enhancer.png"
     }
   ];
