@@ -13,6 +13,7 @@ export const FeaturedProjectCard = ({
   techStack,
   githubUrl,
   imageUrl,
+  imageAlt,
   className 
 }) => {
   return (
@@ -27,7 +28,7 @@ export const FeaturedProjectCard = ({
         <div className="relative w-full aspect-video rounded-xl bg-surface-secondary overflow-hidden shadow-sm group-hover:shadow-md transition-shadow duration-300">
           <img 
             src={imageUrl} 
-            alt={`${title} screenshot`} 
+            alt={imageAlt || `${title} screenshot`}
             loading="lazy"
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
           />

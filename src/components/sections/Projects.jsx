@@ -47,6 +47,28 @@ export const Projects = () => {
       ],
       githubUrl: "https://github.com/saninfuhad763-collab/OpsMind-AI",
       imageUrl: "/assets/projects/opsmind-ai.png"
+    },
+    {
+      title: "AIVOA Complaint Intelligence",
+      status: "Featured Project",
+      tagline: "AI-Powered Pharmaceutical Complaint Management",
+      problem: "Pharmaceutical quality teams struggle to efficiently extract, validate, and structure critical data from unstructured customer complaint texts and PDF files.",
+      solution: "AIVOA Complaint Intelligence transforms unstructured complaint documents into structured quality data with AI-assisted classification, risk assessment, duplicate detection, completeness validation, and CAPA recommendations.",
+      engineeringFocus: "Multi-step AI orchestration using LangGraph/LangChain, negation-aware risk assessment, PDF document extraction, and full-stack FastAPI/PostgreSQL persistence.",
+      keyFeatures: [
+        "AI-powered complaint extraction from text and PDF",
+        "LangGraph-based multi-step AI analysis workflow",
+        "Negation-aware severity and risk assessment",
+        "Interactive AI Copilot for reviewing and updating extracted data",
+        "PostgreSQL CRUD persistence and complaint history",
+        "Duplicate detection, completeness checking, and CAPA recommendations"
+      ],
+      techStack: [
+        "React 19", "FastAPI", "Python", "LangGraph", "LangChain", "PostgreSQL", "Redux Toolkit", "Pydantic", "Groq API", "GitHub"
+      ],
+      githubUrl: "https://github.com/saninfuhad763-collab/aivoa-complaint-intelligence",
+      imageUrl: "/assets/projects/aivoa-complaint-intelligence.png",
+      imageAlt: "AIVOA Complaint Intelligence application interface"
     }
   ];
 
