@@ -26,6 +26,7 @@ export const Projects = () => {
         "React", "Vite", "Node.js", "Express.js", "MongoDB", "Tailwind CSS", "JWT", "Puppeteer", "AI API Integration", "GitHub"
       ],
       githubUrl: "https://github.com/saninfuhad763-collab/CareerForge-Pro",
+      liveUrl: "https://career-forge-pro-bice.vercel.app/",
       imageUrl: "/assets/projects/careerforge-pro.png"
     },
     {

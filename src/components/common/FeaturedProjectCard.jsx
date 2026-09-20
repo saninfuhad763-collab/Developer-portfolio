@@ -12,6 +12,7 @@ export const FeaturedProjectCard = ({
   keyFeatures,
   techStack,
   githubUrl,
+  liveUrl,
   imageUrl,
   imageAlt,
   className 
@@ -82,14 +83,27 @@ export const FeaturedProjectCard = ({
             ))}
           </div>
           
-          <Button 
-            variant="outline" 
-            className="shrink-0 group/btn"
-            onClick={() => window.open(githubUrl, '_blank', 'noopener,noreferrer')}
-          >
-            <svg className="w-5 h-5 mr-2 group-hover/btn:text-text-primary transition-colors" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.2c3-.3 6-1.5 6-6.5a5.4 5.4 0 0 0-1.5-3.8 5.4 5.4 0 0 0-.1-3.7s-1.2-.4-3.9 1.4a13.3 13.3 0 0 0-7 0c-2.7-1.8-3.9-1.4-3.9-1.4a5.4 5.4 0 0 0-.1 3.7 5.4 5.4 0 0 0-1.5 3.8c0 5 3 6.2 6 6.5a4.8 4.8 0 0 0-1 3.2v4"/><path d="M9 18c-4.5 1-5-2.5-5-2.5"/></svg>
-            View Source
-          </Button>
+          <div className="flex flex-wrap items-center gap-3 shrink-0">
+            <Button
+              variant="outline"
+              className="shrink-0 group/btn"
+              onClick={() => window.open(githubUrl, '_blank', 'noopener,noreferrer')}
+            >
+              <svg className="w-5 h-5 mr-2 group-hover/btn:text-text-primary transition-colors" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.2c3-.3 6-1.5 6-6.5a5.4 5.4 0 0 0-1.5-3.8 5.4 5.4 0 0 0-.1-3.7s-1.2-.4-3.9 1.4a13.3 13.3 0 0 0-7 0c-2.7-1.8-3.9-1.4-3.9-1.4a5.4 5.4 0 0 0-.1 3.7 5.4 5.4 0 0 0-1.5 3.8c0 5 3 6.2 6 6.5a4.8 4.8 0 0 0-1 3.2v4"/><path d="M9 18c-4.5 1-5-2.5-5-2.5"/></svg>
+              View Source
+            </Button>
+
+            {liveUrl && (
+              <Button
+                variant="primary"
+                className="shrink-0 group/btn"
+                onClick={() => window.open(liveUrl, '_blank', 'noopener,noreferrer')}
+              >
+                <svg className="w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Live Demo
+              </Button>
+            )}
+          </div>
         </div>
       </div>
     </div>
